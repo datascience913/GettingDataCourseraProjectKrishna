@@ -14,4 +14,12 @@ Description of run_analysis.R
 
 * Renaming activities: The numeric activity labels are mapped to corresponding descriptive names using the information in "activity_labels.txt" and the resulting column is called activityNames.
 
+* Renaming features: The 66 extracted features are assigned descriptive, syntactically valid, unique  names by removing special characters, such "(", ")", and "-" from their original names listed in features.txt. This is done using make.names().
+
+* Creating a tidy dataset: Now that we have all the elements, the final step is to create the tidy data set. First, I add a new column called "subject" to the dataset resulting in Step 4. This column consists of the subject IDs in the training and test dataset and forsm the first column. Then I add the activity names (from step 3) as the last column in the dataset. So we now have a dataset with 10299 rows and 68 columns: "subject", 66 features corresponding to mean and std .dev, and finally the "activityName". Lastly, the mean of each of the 66 extracted variables is computed, grouped by "subject" and "activityName". This results in  the final tidy dataset with 30 rows and 68 columns. Each row corresponds to a distinct subject-activityName combination. This tidy dataset is output to the file "tidy.txt" using write.table(). The dataset has header and separator = "\t". It has been uploaded to the Coursera web page. The 
+
+ 
+
+
+
 ~     
