@@ -18,7 +18,7 @@ Description of run_analysis.R
 
 6. **Creating a tidy dataset:** Now that we have all the elements, the final step is to create the tidy data set. First, I added a new column called "subject" to the dataset resulting from Step 5 above. This column consists of the subject IDs in the combined training and test dataset (from step 2 above) and forms the first column. Then I add the activity names (from step 4 above) as an additional column. So we now have a dataset with 10299 rows and 68 columns: "subject", "acitivityName", and the 66 features corresponding to mean and std .dev (from Step 5 above). Lastly, the average of each of the 66 extracted variables is computed, grouped by "subject" and "activityName". This results in  the final tidy dataset with 180 rows and 68 columns. Each row corresponds to the average measurements for a distinct subject-activityName combination. 
 
-7. **Output:** The tidy dataset resulting from Step 6 above is output to the file "tidy.txt" using write.table(). The dataset has a header with the column names and the column separator is a tab. The row names are not part of the output. The tidy dataset has been uploaded to the Coursera web page.  Codebook.Rmd contains a listing and description of the columns in the tiny dataset.
+7. **Output:** The tidy dataset resulting from Step 6 above is output to the file "tidy.txt" using write.table(). The dataset has a header with the column names and the column separator is a tab. The row names are not part of the output. The tidy dataset has been uploaded to the Coursera web page.  Codebook.Rmd contains the column names, description, and value type of the columns in the tiny dataset.
 
  
 
